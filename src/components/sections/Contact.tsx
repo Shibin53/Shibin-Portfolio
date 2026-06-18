@@ -27,11 +27,41 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormState({ name: "", email: "", subject: "", message: "" });
+
+    try {
+      const formDataToSend = new FormData();
+
+      formDataToSend.append("Name", formState.name);
+      formDataToSend.append("Email", formState.email);
+      formDataToSend.append("Subject", formState.subject);
+      formDataToSend.append("Message", formState.message);
+
+      const response = await fetch("http://172.16.0.2/shibin-portfolio/contactus.php",{method: "POST",body: formDataToSend,});
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const result = await response.text();
+      console.log(result);
+
+      setSubmitted(true);
+
+      setFormState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   const handleChange = (
