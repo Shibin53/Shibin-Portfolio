@@ -16,7 +16,6 @@ const contactInfo = [
 const socialLinks = [
   { icon: Github, label: "GitHub", href: siteConfig.github },
   { icon: Linkedin, label: "LinkedIn", href: siteConfig.linkedin },
-  { icon: Twitter, label: "Twitter", href: siteConfig.twitter },
 ];
 
 export default function Contact() {

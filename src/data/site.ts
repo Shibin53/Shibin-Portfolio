@@ -7,8 +7,7 @@ export const siteConfig = {
   phone: "+91 9943197976",
   location: "Kanyakumari, Tamil Nadu, India",
   github: "https://github.com/Shibin53",
-  linkedin: "https://linkedin.com/in/shibin",
-  twitter: "https://twitter.com/shibin",
+  linkedin: "https://www.linkedin.com/in/shibin-francis-b52747344/",
   about:
     "Passionate Web Developer with experience in building responsive and interactive web applications using modern technologies. I enjoy solving real-world problems and creating seamless digital experiences.",
 };
