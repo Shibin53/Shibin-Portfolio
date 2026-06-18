@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shibin — Full Stack Web Developer Portfolio
 
 A modern, responsive personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion.
@@ -117,3 +118,6 @@ No environment variables are required for the base portfolio. Add them in Vercel
 ## License
 
 © 2026 Shibin. All rights reserved.
+=======
+# Shibin-Portfolio
+>>>>>>> 47692949b56857279a11ea2be9f201dffb6e2f19
